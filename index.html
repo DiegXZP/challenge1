@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <title>Encriptador</title>
+</head>
+<body>
+    <header>
+        <img src="imagenes/Vector.png" class="alura">
+    </header>
+    <main>
+        <div class="zona-encriptar">
+            <textarea class="codigo" placeholder="Ingrese su texto aquí..." rows="5" cols="7"></textarea>
+            <label class="textita">Solo letras minúsculas y sin acentos</label>
+            <div class="botones">
+                <button class="encriptar" id="encriptar-texto">Encriptar</button>
+                <button class="desencriptar">Desencriptar</button>
+            </div>
+        </div>
+        <div class="zona-desencriptar">
+            <img src="imagenes/Rectangle 1.png" class="resultado">
+            <label class="noEncontrado">No se ha encontrado ningún Texto</label>
+            <label class="label2" >Ingrese texto que desea encriptar o desencriptar...</label>
+            <textarea class="resultados" rows="5" cols="7"></textarea>
+            <button class="copiar" id="copiado">Copiar</button>
+        </div>
+        <script>
+            function encriptarTexto(){
+                const tex = document.querySelector(".codigo").value;
+                var textoFinal = tex.replace(/e/gm,"enter");
+                var textoFinal = textoFinal.replace(/i/gm,"imes");
+                var textoFinal = textoFinal.replace(/a/gm,"ai");
+                var textoFinal = textoFinal.replace(/u/gm,"ufat");
+                var textoFinal = textoFinal.replace(/o/gm,"ober");
+                console.log(textoFinal);
+                document.querySelector(".noEncontrado").style.display = "none";
+                document.querySelector(".label2").style.display = "none";
+                document.querySelector(".resultados").style.display = "block";
+                document.querySelector(".resultados").innerHTML= textoFinal;
+            }
+            function desencriptarTexto(){
+                const tex = document.querySelector(".codigo").value;
+                var textoFinal = tex.replace(/enter/gm,"e");
+                var textoFinal = textoFinal.replace(/imes/gm,"i");
+                var textoFinal = textoFinal.replace(/ai/gm,"a");
+                var textoFinal = textoFinal.replace(/ufat/gm,"u");
+                var textoFinal = textoFinal.replace(/ober/gm,"o");
+                console.log(textoFinal);
+                document.querySelector(".noEncontrado").style.display = "none";
+                document.querySelector(".label2").style.display = "none";
+                document.querySelector(".resultados").style.display = "block";
+                document.querySelector(".resultados").innerHTML= textoFinal;
+            }
+            function copiarTexto(){
+                var content = document.querySelector(".resultados");
+                content.select();
+                document.execCommand("copy");
+                alert("Copiado!")
+                console.log("copiado")
+            }
+            var encripta = document.querySelector("#encriptar-texto");
+            encripta.onclick = encriptarTexto;
+            var des = document.querySelector(".desencriptar");
+            des.onclick = desencriptarTexto;
+            var cop =document.querySelector("#copiado");
+            cop.onclick = copiarTexto;
+        </script>
+    </main>
+</body>
+</html>

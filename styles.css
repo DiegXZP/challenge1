@@ -1,0 +1,115 @@
+body{
+    width: 1920px;
+    height: 1080px;
+}
+header{
+    width: 100%;
+    height: 10%;
+    background: #9CA4CE;
+}
+main{
+    width: 940px;
+    background: #F3F5FC;
+    width: 100%;
+    height: 100%;
+}
+.alura{
+    width: 31.09px;
+    height: 48px;
+    left: 44px;
+    position: absolute;
+    top: 40px;
+    bottom: 0;
+}
+.zona-encriptar{
+    position: absolute;
+    width: 70%;
+    height: 80%;
+    top: 16.5%;
+    left: 7%;
+}
+.codigo{
+    position: absolute;
+    width: 80%;
+    height: 70%;
+    top: 3%;
+    left: 5%;
+    border-radius: 15px;
+}
+.textita{
+    position: absolute;
+    top: 80%;
+    left: 12%;
+    font-family: 'Montserrat', sans-serif;
+}
+.botones{
+    position: absolute;
+    left: 10%;
+    top: 85%;
+    padding: 6px auto;
+    margin: 5px 10px;
+}
+.encriptar{
+    display: inline-block;
+    padding: 24px auto;
+    width: 320px;
+    height: 67px;
+    background: #0A3871;
+    border-radius: 24px;
+    text-align: center;
+}
+.desencriptar{
+    display: inline-block;
+    padding: 24px auto;
+    width: 320px;
+    height: 67px;
+    background: #D8DFE8;
+    border-radius: 24px;
+    text-align: center;
+}
+.zona-desencriptar{
+    position: absolute;
+    left: 70%;
+    width: 20%;
+    height: 80%;
+}
+.resultado{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+}
+.noEncontrado{
+    position: absolute;
+    top: 15%;
+    left: 19%;
+    width: 60%;
+    height: 40%;
+    font-size: 2em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+.label2{
+    position: absolute;
+    top: 70%;
+    left: 19%;
+    width: 60%;
+    height: 40%;
+}
+.resultados{
+    position: absolute;
+    top: 15%;
+    left: 19%;
+    width: 60%;
+    height: 40%;
+    display: none;
+}
+.copiar{
+    position: absolute;
+    top: 89%;
+    left: 25%;
+    width: 50%;
+    height: 8%;
+    border-radius: 24px;
+}
